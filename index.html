@@ -5,30 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trip It!</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap" rel="stylesheet">
+    <!-- STYLE SHEETS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" >
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
+
 <body>
     <!-- HEADER -->
-    <h1>Trip It</h1>
-    <div>
-        <!-- NAV BAR -->
-            <ul>
-                <li>
-                    <a href="#travel-tips">Travel Tips</a>
-                </li>
-                <li>
-                    <a href="#go-back">Go Back</a>
-                </li>
-            </ul>
-        </nav>
+    <!-- NAV BAR -->
+    <!-- ?? need assistance with keeping the nav bar links to the right when browser size is adjusted ?? -->
+    <nav class="navbar is-transparent is-flex is-flex-wrap-wrap">
+        <div class="navbar-brand">
+                <img class="logo" src="./assets/images/Trip-It-Words-Beside (500 × 100 px) (300 × 100 px) (1).png" />
+        </div>
+        <div class="navbar-end is-flex is-flex-wrap-wrap is-align-content-flex-end">
+            <a href="#travel-tips" class="navbar-item">Travel Tips</a>
+            <a href="#go-back" class="navbar-item">Go Back</a>
+        </div>
+    </nav>
 
     <!-- MAIN PAGE -->
     <section class="main-page">
         <!-- INTRO -->
-        <article>
-            <div>
-                <h2>Welcome to Trip It...</h2>
-                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+        <article class="column">
+            <div class="column is-four-fifths">
+                <h2 class="intro-style column is-three-quarters is-offset-one-quarter">Welcome to Trip It...</h2>
+                <h3 class="slogan column is-three-quarters is-offset-one-quarter">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
             </div>
         </article>
     </section>
@@ -56,15 +63,11 @@
     </section>
 
     <!-- FOOTER -->
-    <footer>
-        <ul>
-            <li>
-                <a href="#about-us-modal">About Us</a>
-            </li>
-            <li>
-                &copy; 2022 Trip It
-            </li>
-        </ul>
+    <footer class="navbar is-flex is-flex-wrap-wrap is-align-content-flex-end is-justify-content-center">
+        <div>
+            <a href="#about-us-modal">About Us</a>
+            &copy; 2022 Trip It
+        </div>
     </footer>
 
     <!-- SCRIPT FILES -->
