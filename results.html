@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip It!</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap" rel="stylesheet">
+    <!-- STYLE SHEETS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" >
+    <link rel="stylesheet" href="./assets/css/results-page.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <!-- NAV BAR -->
+    <!-- ?? need assistance with keeping the nav bar links to the right when browser size is adjusted ?? -->
+    <nav class="navbar is-transparent is-flex is-flex-wrap-wrap">
+        <div class="navbar-brand">
+                <img class="logo" src="./assets/images/Trip-It-Words-Beside (500 × 100 px) (300 × 100 px) (1).png" />
+        </div>
+        <div class="navbar-end is-flex is-flex-wrap-wrap is-align-content-flex-end">
+            <a href="#travel-tips" class="navbar-item has-text-weight-bold">Travel Tips</a>
+            <a id="#go-back" href="./index.html" class="navbar-item has-text-weight-bold">Go Back</a>
+        </div>
+    </nav>
+
+    <!-- RESULTS SECTION -->
+    <section class="results-page container">
+        <!-- INTRO -->
+        <article class="columns">
+            <div class="column">
+                <!-- ?? have JS linked to this so the destination name displays in h2 ?? -->
+                <h2 class="intro-style column is-size-1 has-text-centered has-text-weight-bold">Placeholder Destination Name</h2>
+                <!-- ?? have JS link the departure and arrival of trip in h3 ?? -->
+                <h3 class="slogan column has-text-centered is-size-4 has-text-weight-bold">Placeholder Destination Date</h3>
+                <h4 class="slogan column has-text-centered is-size-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+            </div>
+        </article>
+    </section>
+
+    <!-- USER RESULTS -->
+    <section class="container">
+        <article class="columns">
+                <!-- FLIGHTS -->
+                <div class="output-data column is-6">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi nobis unde cumque iusto rem sed.
+                    </p>
+                </div>
+
+                <!-- WEATHER -->
+                <div class="output-data column is-3">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi nobis unde cumque iusto rem sed.
+                    </p>
+                </div>
+
+                <!-- THINGS TO DO -->
+                <div class="output-data column is-3">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi nobis unde cumque iusto rem sed.
+                    </p>
+                </div>
+        </article>
+    </section>
+    
+
+    <!-- FOOTER -->
+    <!-- ?? Still working on getting the footer to be sticky to the bottom of the page (not built into Bulma for some reason) -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <a href="#about-us-modal" class="about-us has-text-weight-bold px-4">About Us</a>
+            &copy; 2022 Trip It
+        </div>
+    </footer>
+
+    <!-- SCRIPT FILES -->
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
