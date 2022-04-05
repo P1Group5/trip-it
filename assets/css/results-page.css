@@ -21,9 +21,9 @@ body {
     color: var(--font-color);
 }
 
-.user-input {
-    margin-left: 15%;
-    margin-right: 15%;
+/* ?? STILL NEEDS FLEXBOX TO ADJUST TO BROWSER SIZE OR MEDIA */
+.output-data {
+    margin: 10px;
     border: 2px solid var(--font-color);
     border-radius: 15px;
     /* ?? not sure why this box-shadow isn't working ?? */
