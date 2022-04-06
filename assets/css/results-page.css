@@ -30,6 +30,13 @@ body {
     box-shadow: 5px, 10px, 20px var(--font-color);
 }
 
+.flight-options,
+.weather-options,
+.things-to-do {
+    border: 1px solid var(--font-color);
+    border-radius: 15px;
+}
+
 .about-us {
     color: var(--font-color);
 }
