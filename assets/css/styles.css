@@ -2,6 +2,7 @@
     --background-color: #fef7f2;
     --font-color: #7b716d;
     --black: #000000;
+    --button-color: #cbc0b9;
 }
 
 * {
@@ -28,6 +29,11 @@ body {
     border-radius: 15px;
     /* ?? not sure why this box-shadow isn't working ?? */
     box-shadow: 5px, 10px, 20px var(--font-color);
+}
+
+.submit-button {
+    background-color: var(--button-color);
+    color: var(--background-color);
 }
 
 .about-us {

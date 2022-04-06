@@ -42,28 +42,34 @@
 
     <!-- TRAVEL INFO CONTAINER -->
     <section class="user-input section px-6 py-6">
-        <div class="container">
-            <div class="columns is-flex is-flex-wrap-wrap">
+        <div class="container is-flex is-flex-wrap-wrap">
+            <div class="columns is-flex-wrap-wrap">
                 <!-- ?? Need to link expedia API to location/destinations ?? -->
-                <div class="column is-5">
+                <div class="column is-6">
                     <label class="mx-2 my-2 has-text-weight-bold">Where From?</label>
                     <input type="text" class="mx-2 my-2 input is-normal" placeholder="Flying From" />
                 </div>
-                <div class="column is-5">
+                <div class="column is-6">
                     <label class="mx-2 my-2 has-text-weight-bold">Where To?</label>
                     <input type="text" class="mx-2 my-2 input is-normal" placeholder="Flying To" />
                 </div>
                 <!-- ?? Need to link a calendar to these inputs ?? -->
-                <div class="column is-5">
+                <div class="column is-6">
                     <label class="mx-2 my-2 has-text-weight-bold">Departure Date</label>
                     <input type="text" class="mx-2 my-2 input is-normal" placeholder="mm/dd/yyyy" />
                 </div>
-                <div class="column is-5">
+                <div class="column is-6">
                     <label class="mx-2 my-2 has-text-weight-bold">Arrival Date</label>
                     <input type="text" class="mx-2 my-2 input is-normal" placeholder="mm/dd/yyyy" />
                 </div>
+                <div class="column is-12">
+                    <!-- ?? Submit text needs to be centered ?? -->
+                    <button type="submit" class="submit-button is-centered mx-2 my-2 input is-normal has-text-weight-bold" value="submit">Submit</button>
+                </div>
             </div>
         </div>
+    </section>
+
     <!-- FOOTER -->
     <!-- ?? Still working on getting the footer to be sticky to the bottom of the page (not built into Bulma for some reason) -->
     <footer class="footer">
