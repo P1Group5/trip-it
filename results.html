@@ -135,7 +135,7 @@
                     <h4 class="is-size-5 has-text-weight-bold mx-2 my-2">Weather Info</h4>
                     <section class="container mx-2 my-2">
                         <article class="columns is-flex is-flex-direction-column is-full">
-                            <button type="button" id="currentWeatherBtn" class="weather-options button column my-3 is-normal">
+                            <button type="button" id="currentWeatherBtn" class="weather-options button column my-3 is-normal open">
                                 Current Weather
                             </button>
 
@@ -147,7 +147,7 @@
                                 14-Day Forecast
                             </button>
 
-                            <button type="button" id="monthlyWeatherBtn" class="weather-options button column my-3 is-normal">
+                            <button type="button" id="monthlyWeatherBtn" class="weather-options button column my-3 is-normal"> 
                                 30-Day Forecast
                             </button>
                         </article>
@@ -220,14 +220,17 @@
     
     <!-- MODAL -->
     <!-- CURRENT WEATHER MODAL -->
-    <div class="modal current-weather-modal">
-        <div class="modal-background"></div>
-        <div class="modal-content has-background-white py-5 px-5">
+    <div class="modal current-weather-modal modal-container" id="modal_container">
+        <div class="modal-background">
+        <div class="modal-content has-background-white py-5 px-5 modal">
             <h3 class="title mb-6">Current Weather</h3>
             <h4 class="is-size-5 has-text-centered">Placeholder Location</h4>
             <h4 class="is-size-5 has-text-centered">Placeholder Forecast</h4>
         </div>
+        <button class="close">Close</button>
     </div>
+</div>
+
     <!-- WEEKLY WEATHER MODAL -->
     <div class="modal weekly-weather-modal">
         <div class="modal-background"></div>
@@ -237,6 +240,7 @@
             <h4 class="is-size-5 has-text-centered">Placeholder Forecast</h4>
         </div>
     </div>
+
     <!-- BIWEEKLY WEATHER MODAL -->
     <div class="modal biweekly-weather-modal">
         <div class="modal-background"></div>
@@ -246,6 +250,7 @@
             <h4 class="is-size-5 has-text-centered">Placeholder Forecast</h4>
         </div>
     </div>
+
     <!-- MONTHLY WEATHER MODAL -->
     <div class="modal monthly-weather-modal">
         <div class="modal-background"></div>
@@ -260,7 +265,7 @@
     <!-- ?? Still working on getting the footer to be sticky to the bottom of the page (not built into Bulma for some reason) -->
     <footer class="footer">
         <div class="content has-text-centered">
-            <a href="#about-us-modal" class="about-us has-text-weight-bold px-4">About Us</a>
+            <a href="./about-us.html" class="about-us has-text-weight-bold px-4">About Us</a>
             &copy; 2022 Trip It
         </div>
     </footer>
