@@ -1,0 +1,39 @@
+:root {
+    --background-color: #fef7f2;
+    --font-color: #7b716d;
+    --black: #000000;
+    --button-color: #cbc0b9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: var(--background-color);
+    color: var(--font-color);
+    min-height: 100vh;
+}
+
+.navbar,
+.footer {
+    background-color: var(--background-color);
+    color: var(--font-color);
+}
+
+.travel-list {
+    border: 2px solid var(--font-color);
+    border-radius: 15px;
+    /* ?? not sure why this box-shadow isn't working ?? */
+    box-shadow: 5px, 10px, 20px var(--font-color);
+}
+
+.about-us {
+    color: var(--font-color);
+}
+
+.footer {
+    margin-top: auto;
+}
