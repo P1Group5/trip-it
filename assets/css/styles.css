@@ -32,6 +32,7 @@ body {
     box-shadow: 5px, 10px, 20px var(--font-color);
 }
 
+
 .submit-button {
     background-color: var(--button-color);
     color: var(--background-color);
