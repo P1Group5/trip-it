@@ -40,7 +40,7 @@
         <a href="./travel-tips.html" class="navbar-item has-text-weight-bold"
           >Travel Tips</a
         >
-        <a href="./index.html" class="navbar-item has-text-weight-bold"
+        <a onclick="history.back()" class="navbar-item has-text-weight-bold"
           >Go Back</a
         >
       </div>
@@ -87,6 +87,9 @@
           <!-- Calendar looks funky but it's functional, just need to tie it into the flight and weather -->
           <div class="column is-6">
             <label class="mx-2 my-2 has-text-weight-bold">When are you going?</label>
+            <label class="mx-2 my-2 has-text-weight-bold"
+              >When are you Leaving?</label
+            >
             <input
               type="text"
               class="datePicker mx-2 my-2 input is-normal"
@@ -96,7 +99,9 @@
             />
           </div>
           <div class="column is-6">
-            <label class="mx-2 my-2 has-text-weight-bold">When are you coming home?</label>
+            <label class="mx-2 my-2 has-text-weight-bold"
+              >When are you coming home?</label
+            >
             <input
               type="text"
               class="datePicker mx-2 my-2 input is-normal"
@@ -112,7 +117,8 @@
                 type="submit"
                 id="destination"
                 class="submit-button mx-2 my-2 input is-normal has-text-weight-bold"
-                value="submit">
+                value="submit"
+              >
                 Submit
               </button>
             </a>
@@ -126,7 +132,8 @@
     <footer class="footer">
       <div class="content has-text-centered">
         <a href="#about-us-modal" class="about-us has-text-weight-bold px-4"
-          >About Us</a>
+          >About Us</a
+        >
         &copy; 2022 Trip It
       </div>
     </footer>
