@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap"
       rel="stylesheet"
     />
+
     <!-- STYLE SHEETS -->
     <link
       rel="stylesheet"
@@ -56,7 +57,7 @@
             Welcome to Trip It...
           </h2>
           <h3 class="slogan column is-offset-1 is-size-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Start planning your next trip with a little help from Trip It!
           </h3>
         </div>
       </article>
@@ -83,21 +84,25 @@
               placeholder="Flying To"
             />
           </div>
-          <!-- ?? Need to link a calendar to these inputs ?? -->
+          <!-- Calendar looks funky but it's functional, just need to tie it into the flight and weather -->
           <div class="column is-6">
-            <label class="mx-2 my-2 has-text-weight-bold">When are you Leaving?</label>
+            <label class="mx-2 my-2 has-text-weight-bold">When are you going?</label>
             <input
               type="text"
-              class="mx-2 my-2 input is-normal"
+              class="datePicker mx-2 my-2 input is-normal"
               placeholder="mm/dd/yyyy"
+              id="datePicker-going"
+              autocomplete="off"
             />
           </div>
           <div class="column is-6">
             <label class="mx-2 my-2 has-text-weight-bold">When are you coming home?</label>
             <input
               type="text"
-              class="mx-2 my-2 input is-normal"
+              class="datePicker mx-2 my-2 input is-normal"
               placeholder="mm/dd/yyyy"
+              id="datePicker-home"
+              autocomplete="off"
             />
           </div>
           <div class="column is-12">
@@ -127,8 +132,13 @@
     </footer>
 
     <!-- SCRIPT FILES -->
+    <!-- DATEPICKER API's -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <!-- LOCAL SCRIPT FILES -->
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/airports-array.js"></script>
     <script src="./assets/js/autocomplete.js"></script>
+    <script src="./assets/js/date-picker.js"></script>
   </body>
 </html>

@@ -30,6 +30,10 @@ body {
     box-shadow: 5px, 10px, 20px var(--font-color);
 }
 
+.weather-options {
+    background: var(--background-color);
+}
+
 .flight-options,
 .weather-options,
 .things-to-do {
