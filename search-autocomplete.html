@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- JQuery CSS used to style the autocomplete widget -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <title>Test-it</title>
+</head>
+
+<body>
+   
+    <!-- Loads JQuery code used for the autocomplete function -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+        
+
+    <div class="ui-widget">
+        <label for="locations">Departure: </label>
+        <input id="location-input" placeholder="Name of a city">
+    </div>
+
+    <br>
+    <br>
+
+    <!-- Similar to the one above, but with a different id -->
+    <div class="ui-widget">
+        <label for="locations">Destination: </label>
+        <input id="destination-input" placeholder="Name of a city">
+    </div>
+
+    <!-- loads the list of airports with labels and values -->
+    <script src="./airports-array.js"></script>
+
+    <!-- Autocomplete function written using JQueryUI -->
+    <script src="./autocomplete.js"></script>
+</body>
+</html>
