@@ -50,7 +50,7 @@ var displayFlights = function(flights) {
     // create a container for each flight
     var flightEl = document.createElement("a");
     flightEl.classList = "flight-options column my-3 has-text-centered";
-    flightEl.setAttribute("href", flights.legs[i].baggageFeesUrl)
+    flightEl.setAttribute("href", "https://www.expedia.ca/Flights?langid=4105&semcid=CA.MULTILOBF.GOOGLE.GT-c-EN.FLIGHT&SEMDTL=a1343588247.b122666585007.r1.g1aud-1210701017259:kwd-18734303544.i1.d1587522981736.e1c.j19000858.k1.f1.n1.l1g.h1b.m1&gclid=Cj0KCQjwl7qSBhD-ARIsACvV1X2hUua4QAi4xyNwpan2GKQFfb6oeD3BT3oEsZ0j61qvkMxmgqTpG_0aAv8eEALw_wcB")
 
     // create a span element to hold flight info
     var titleEl = document.createElement("span");
