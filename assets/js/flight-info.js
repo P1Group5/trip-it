@@ -1,10 +1,8 @@
 //flight data
-// date format must be yyyy-mm-dd
-var departureDate = "2022-04-10";
-var returnDate = "2022-04-20";
-// locations must be airport code (eg.YYZ for toronto)
-var departureAirport = "YYZ";
-var arrivalAirport = "LAX";
+var departureDate = sessionStorage.getItem("departureDate");
+var returnDate = sessionStorage.getItem("returnDate");
+var departureAirport = sessionStorage.getItem("locationIata");
+var arrivalAirport = sessionStorage.getItem("destinationIata");
 var flightContainerEL = document.querySelector("#flights-container");
 
 var getFlights = function(flights) {
