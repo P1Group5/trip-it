@@ -50,3 +50,8 @@ body {
 .footer {
   margin-top: auto;
 }
+
+.flight-info {
+    display: flex;
+    justify-content: space-between;
+}
