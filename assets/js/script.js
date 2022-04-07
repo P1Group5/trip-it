@@ -1,6 +1,6 @@
 var destinationNameEl = document.querySelector("#destination");
 var currentWeatherEl = document.querySelector("#currentWeather");
-var apiKey = VW4KTQT545MEZVT7VAMGJX9F5;
+var apiKey = "VW4KTQT545MEZVT7VAMGJX9F5";
 
 // getting the city name from the user input from the index.html page
 var city = function () {
