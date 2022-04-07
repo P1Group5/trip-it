@@ -23,19 +23,11 @@ body {
     color: var(--font-color);
 }
 
-.user-input {
-    margin-left: 15%;
-    margin-right: 15%;
+.travel-list {
     border: 2px solid var(--font-color);
     border-radius: 15px;
     /* ?? not sure why this box-shadow isn't working ?? */
     box-shadow: 5px, 10px, 20px var(--font-color);
-}
-
-
-.submit-button {
-    background-color: var(--button-color);
-    color: var(--background-color);
 }
 
 .about-us {
@@ -45,4 +37,3 @@ body {
 .footer {
     margin-top: auto;
 }
-

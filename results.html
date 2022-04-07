@@ -18,7 +18,6 @@
 <body>
     <!-- HEADER -->
     <!-- NAV BAR -->
-    <!-- ?? need assistance with keeping the nav bar links to the right when browser size is adjusted ?? -->
     <nav class="navbar is-transparent is-flex is-flex-wrap-wrap">
         <div class="navbar-brand">
             <a href="./index.html">
@@ -30,8 +29,7 @@
         <div class="navbar-end is-flex is-flex-wrap-wrap is-align-content-flex-end">
             <a href="./travel-tips.html" class="navbar-item has-text-weight-bold">Travel Tips</a>
             <a onclick="history.back()" class="navbar-item has-text-weight-bold"
-            >Go Back</a
-          >
+            >Go Back</a>
     </nav>
 
     <!-- RESULTS SECTION -->
@@ -40,10 +38,10 @@
         <article class="columns">
             <div class="column">
                 <!-- ?? have JS linked to this so the destination name displays in h2 ?? -->
-                <h2 class="intro-style column is-size-1 has-text-centered has-text-weight-bold">Placeholder Destination Name</h2>
+                <h2 id="destinationLocation" class="intro-style column is-size-1 has-text-centered has-text-weight-bold">Placeholder Destination Name</h2>
                 <!-- ?? have JS link the departure and arrival of trip in h3 ?? -->
-                <h3 class="slogan column has-text-centered is-size-4 has-text-weight-bold">Placeholder Destination Date</h3>
-                <h4 class="slogan column has-text-centered is-size-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                <h3 id="destinationDate" class="column has-text-centered is-size-4 has-text-weight-bold">Placeholder Destination Date</h3>
+                <h4 class="column has-text-centered is-size-5 mb-6">Everything you need to know, before you pack your bags</h4>
             </div>
         </article>
     </section>
@@ -57,55 +55,75 @@
                     <section class="container mx-2 my-2">
                         <article class="columns is-flex is-flex-direction-column is-full">
                             <!-- 10 DIFFERENT FLIGHT OPTIONS -->
-                            <div class="flight-options column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
+                            <div class="flight-options column my-3 level">
+                                <div class="level-item has-text-centered">
+                                    <h5 id="airline" class="is-size-5 has-text-weight-bold px-3 py-3">Placeholder Airline Name</h5>
+                                    <h6 id="flightTime" class="is-size-6 px-3 py-3">Placeholder Flight Time</h6>
+                                    <h6 id="flightCost" class="is-size-6 px-3 py-3">Placeholder Flight Cost</h6>
+                                </div>
                             </div>
-                            <div class="flight-options column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
+                            <div class="flight-options column my-3 level">
+                                <div class="level-item has-text-centered">
+                                    <h5 id="airline" class="is-size-5 has-text-weight-bold px-3 py-3">Placeholder Airline Name</h5>
+                                    <h6 id="flightTime" class="is-size-6 px-3 py-3">Placeholder Flight Time</h6>
+                                    <h6 id="flightCost" class="is-size-6 px-3 py-3">Placeholder Flight Cost</h6>
+                                </div>
                             </div>
-                            <div class="flight-options column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
+                            <div class="flight-options column my-3 level">
+                                <div class="level-item has-text-centered">
+                                    <h5 id="airline" class="is-size-5 has-text-weight-bold px-3 py-3">Placeholder Airline Name</h5>
+                                    <h6 id="flightTime" class="is-size-6 px-3 py-3">Placeholder Flight Time</h6>
+                                    <h6 id="flightCost" class="is-size-6 px-3 py-3">Placeholder Flight Cost</h6>
+                                </div>
                             </div>
-                            <div class="flight-options column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
+                            <div class="flight-options column my-3 level">
+                                <div class="level-item has-text-centered">
+                                    <h5 id="airline" class="is-size-5 has-text-weight-bold px-3 py-3">Placeholder Airline Name</h5>
+                                    <h6 id="flightTime" class="is-size-6 px-3 py-3">Placeholder Flight Time</h6>
+                                    <h6 id="flightCost" class="is-size-6 px-3 py-3">Placeholder Flight Cost</h6>
+                                </div>
                             </div>
-                            <div class="flight-options column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
+                            <div class="flight-options column my-3 level">
+                                <div class="level-item has-text-centered">
+                                    <h5 id="airline" class="is-size-5 has-text-weight-bold px-3 py-3">Placeholder Airline Name</h5>
+                                    <h6 id="flightTime" class="is-size-6 px-3 py-3">Placeholder Flight Time</h6>
+                                    <h6 id="flightCost" class="is-size-6 px-3 py-3">Placeholder Flight Cost</h6>
+                                </div>
                             </div>
-                            <div class="flight-options column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
+                            <div class="flight-options column my-3 level">
+                                <div class="level-item has-text-centered">
+                                    <h5 id="airline" class="is-size-5 has-text-weight-bold px-3 py-3">Placeholder Airline Name</h5>
+                                    <h6 id="flightTime" class="is-size-6 px-3 py-3">Placeholder Flight Time</h6>
+                                    <h6 id="flightCost" class="is-size-6 px-3 py-3">Placeholder Flight Cost</h6>
+                                </div>
                             </div>
-                            <div class="flight-options column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
+                            <div class="flight-options column my-3 level">
+                                <div class="level-item has-text-centered">
+                                    <h5 id="airline" class="is-size-5 has-text-weight-bold px-3 py-3">Placeholder Airline Name</h5>
+                                    <h6 id="flightTime" class="is-size-6 px-3 py-3">Placeholder Flight Time</h6>
+                                    <h6 id="flightCost" class="is-size-6 px-3 py-3">Placeholder Flight Cost</h6>
+                                </div>
                             </div>
-                            <div class="flight-options column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
+                            <div class="flight-options column my-3 level">
+                                <div class="level-item has-text-centered">
+                                    <h5 id="airline" class="is-size-5 has-text-weight-bold px-3 py-3">Placeholder Airline Name</h5>
+                                    <h6 id="flightTime" class="is-size-6 px-3 py-3">Placeholder Flight Time</h6>
+                                    <h6 id="flightCost" class="is-size-6 px-3 py-3">Placeholder Flight Cost</h6>
+                                </div>
                             </div>
-                            <div class="flight-options column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
+                            <div class="flight-options column my-3 level">
+                                <div class="level-item has-text-centered">
+                                    <h5 id="airline" class="is-size-5 has-text-weight-bold px-3 py-3">Placeholder Airline Name</h5>
+                                    <h6 id="flightTime" class="is-size-6 px-3 py-3">Placeholder Flight Time</h6>
+                                    <h6 id="flightCost" class="is-size-6 px-3 py-3">Placeholder Flight Cost</h6>
+                                </div>
                             </div>
-                            <div class="flight-options column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
+                            <div class="flight-options column my-3 level">
+                                <div class="level-item has-text-centered">
+                                    <h5 id="airline" class="is-size-5 has-text-weight-bold px-3 py-3">Placeholder Airline Name</h5>
+                                    <h6 id="flightTime" class="is-size-6 px-3 py-3">Placeholder Flight Time</h6>
+                                    <h6 id="flightCost" class="is-size-6 px-3 py-3">Placeholder Flight Cost</h6>
+                                </div>
                             </div>
                         </article>
                     </div>
@@ -113,98 +131,118 @@
 
                 <!-- WEATHER -->
                 <div class="output-data column is-3 has-text-centered">
-                    <h4 class="is-size-5 has-text-weight-bold">Weather Info</h4>
+                    <h4 class="is-size-5 has-text-weight-bold mx-2 my-2">Weather Info</h4>
                     <section class="container mx-2 my-2">
                         <article class="columns is-flex is-flex-direction-column is-full">
-                            <!-- 10 DIFFERENT FLIGHT OPTIONS -->
-                            <!-- ?? Need to get the bottom of this container to end at the end of the fourth div -->
-                            <div class="weather-options column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
-                            </div>
-                            <div class="weather-options column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
-                            </div>
-                            <div class="weather-options column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
-                            </div>
-                            <div class="weather-options column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
-                            </div>
+                            <button type="button" id="currentWeatherBtn" class="weather-options button column my-3 is-normal">
+                                Current Weather
+                            </button>
+
+                            <button type="button" id="weeklyWeatherBtn" class="weather-options button column my-3 is-normal">
+                                7-Day Forecast
+                            </button>
+
+                            <button type="button" id="biWeeklyWeatherBtn" class="weather-options button column my-3 is-normal">
+                                14-Day Forecast
+                            </button>
+
+                            <button type="button" id="monthlyWeatherBtn" class="weather-options button column my-3 is-normal">
+                                30-Day Forecast
+                            </button>
                         </article>
                     </section>    
                 </div>
 
                 <!-- THINGS TO DO -->
                 <div class="output-data column is-3 has-text-centered">
-                    <h4 class="is-size-5 has-text-weight-bold">Things To Do</h4>
+                    <h4 class="is-size-5 has-text-weight-bold mx-2 my-2">Things To Do</h4>
                     <section class="container mx-2 my-2">
-                        <article class="columns is-flex is-flex-direction-column is-full">
-                            <!-- 10 DIFFERENT FLIGHT OPTIONS -->
-                            <!-- ?? Need to get the bottom of this container to end at the end of the fourth div -->
+                        <article id="toDoList" class="columns is-flex is-flex-direction-column is-full">
+                            <!-- 10 DIFFERENT THINGS TO DO OPTIONS -->
                             <div class="things-to-do column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
+                                <h5 id="toDoLocation" class="is-size-5 has-text-weight-bold px-3 py-3">Placeholder Location Name</h5>
+                                <h6 id="toDoDescription" class="is-size-6 px-3 py-3">Placeholder Description</h6>
                             </div>
                             <div class="things-to-do column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
+                                <h5 id="toDoLocation" class="is-size-5 has-text-weight-bold px-3 py-3">Placeholder Location Name</h5>
+                                <h6 id="toDoDescription" class="is-size-6 px-3 py-3">Placeholder Description</h6>
                             </div>
                             <div class="things-to-do column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
+                                <h5 id="toDoLocation" class="is-size-5 has-text-weight-bold px-3 py-3">Placeholder Location Name</h5>
+                                <h6 id="toDoDescription" class="is-size-6 px-3 py-3">Placeholder Description</h6>
                             </div>
                             <div class="things-to-do column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
+                                <h5 id="toDoLocation" class="is-size-5 has-text-weight-bold px-3 py-3">Placeholder Location Name</h5>
+                                <h6 id="toDoDescription" class="is-size-6 px-3 py-3">Placeholder Description</h6>
                             </div>
                             <div class="things-to-do column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
+                                <h5 id="toDoLocation" class="is-size-5 has-text-weight-bold px-3 py-3">Placeholder Location Name</h5>
+                                <h6 id="toDoDescription" class="is-size-6 px-3 py-3">Placeholder Description</h6>
                             </div>
                             <div class="things-to-do column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
+                                <h5 id="toDoLocation" class="is-size-5 has-text-weight-bold px-3 py-3">Placeholder Location Name</h5>
+                                <h6 id="toDoDescription" class="is-size-6 px-3 py-3">Placeholder Description</h6>
                             </div>
                             <div class="things-to-do column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
+                                <h5 id="toDoLocation" class="is-size-5 has-text-weight-bold px-3 py-3">Placeholder Location Name</h5>
+                                <h6 id="toDoDescription" class="is-size-6 px-3 py-3">Placeholder Description</h6>
                             </div>
                             <div class="things-to-do column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
+                                <h5 id="toDoLocation" class="is-size-5 has-text-weight-bold px-3 py-3">Placeholder Location Name</h5>
+                                <h6 id="toDoDescription" class="is-size-6 px-3 py-3">Placeholder Description</h6>
                             </div>
                             <div class="things-to-do column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
+                                <h5 id="toDoLocation" class="is-size-5 has-text-weight-bold px-3 py-3">Placeholder Location Name</h5>
+                                <h6 id="toDoDescription" class="is-size-6 px-3 py-3">Placeholder Description</h6>
                             </div>
                             <div class="things-to-do column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
+                                <h5 id="toDoLocation" class="is-size-5 has-text-weight-bold px-3 py-3">Placeholder Location Name</h5>
+                                <h6 id="toDoDescription" class="is-size-6 px-3 py-3">Placeholder Description</h6>
                             </div>
                         </article>
                     </section> 
                 </div>
+
         </article>
     </section>
     
+    <!-- MODAL -->
+    <!-- CURRENT WEATHER MODAL -->
+    <div class="modal current-weather-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content has-background-white py-5 px-5">
+            <h3 class="title mb-6">Current Weather</h3>
+            <h4 class="is-size-5 has-text-centered">Placeholder Location</h4>
+            <h4 class="is-size-5 has-text-centered">Placeholder Forecast</h4>
+        </div>
+    </div>
+    <!-- WEEKLY WEATHER MODAL -->
+    <div class="modal weekly-weather-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content has-background-white py-5 px-5">
+            <h3 class="title mb-6">7-Day Forecast</h3>
+            <h4 class="is-size-5 has-text-centered">Placeholder Location</h4>
+            <h4 class="is-size-5 has-text-centered">Placeholder Forecast</h4>
+        </div>
+    </div>
+    <!-- BIWEEKLY WEATHER MODAL -->
+    <div class="modal biweekly-weather-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content has-background-white py-5 px-5">
+            <h3 class="title mb-6">14-Day Forecast</h3>
+            <h4 class="is-size-5 has-text-centered">Placeholder Location</h4>
+            <h4 class="is-size-5 has-text-centered">Placeholder Forecast</h4>
+        </div>
+    </div>
+    <!-- MONTHLY WEATHER MODAL -->
+    <div class="modal monthly-weather-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content has-background-white py-5 px-5">
+            <h3 class="title mb-3 has-text-centered">30-Day Forecast</h3>
+            <h4 class="is-size-5 has-text-centered">Placeholder Location</h4>
+            <h4 class="is-size-5 has-text-centered">Placeholder Forecast</h4>
+        </div>
+    </div>
 
     <!-- FOOTER -->
     <!-- ?? Still working on getting the footer to be sticky to the bottom of the page (not built into Bulma for some reason) -->
@@ -216,6 +254,7 @@
     </footer>
 
     <!-- SCRIPT FILES -->
+    <script src="./assets/js/date-picker.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
