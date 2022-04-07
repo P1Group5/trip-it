@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trip It!</title>
 
-
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,10 +20,12 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
     />
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    
-    <!-- JQuery CSS used to style the autocomplete widget -->
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css">
 
+    <!-- JQuery CSS used to style the autocomplete widget -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css"
+    />
   </head>
 
   <body>
@@ -44,6 +45,9 @@
       >
         <a href="./travel-tips.html" class="navbar-item has-text-weight-bold"
           >Travel Tips</a
+        >
+        <a href="./weather.html" class="navbar-item has-text-weight-bold"
+          >Weather</a
         >
         <a onclick="history.back()" class="navbar-item has-text-weight-bold"
           >Go Back</a
@@ -73,7 +77,7 @@
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 
     <!-- TRAVEL INFO CONTAINER -->
-    <section class="user-input section px-6 py-6">
+    <form action="./results.html" class="user-input section px-6 py-6">
       <div class="container is-flex is-flex-wrap-wrap">
         <div class="columns is-flex-wrap-wrap">
           <!-- ?? Need to link expedia API to location/destinations ?? -->
@@ -84,6 +88,7 @@
               id="location-input"
               class="mx-2 my-2 input is-normal"
               placeholder="Flying From"
+              required
             />
           </div>
           <div class="ui-widget column is-6">
@@ -93,36 +98,42 @@
               id="destination-input"
               class="mx-2 my-2 input is-normal"
               placeholder="Flying To"
+              required
             />
           </div>
 
           <!-- ?? Need to link a calendar to these inputs ?? done -->
 
-          <div class="column is-6">
-            <label class="mx-2 my-2 has-text-weight-bold">When are you going?</label>
+          <div class="column is-6" id="datechoice">
+            <label class="mx-2 my-2 has-text-weight-bold"
+              >When are you going?</label
+            >
             <input
               type="date"
               class="mx-2 my-2 input is-normal"
               placeholder="YYYY/MM/DD"
               id="departure-date"
+              required
             />
           </div>
-          <div class="column is-6">
-            <label class="mx-2 my-2 has-text-weight-bold">When are you returning?</label>
-             <input
+          <div class="column is-6" id="datechoice">
+            <label class="mx-2 my-2 has-text-weight-bold"
+              >When are you returning?</label
+            >
+            <input
               type="date"
               class="mx-2 my-2 input is-normal"
               placeholder="YYYY/MM/DD"
               id="return-date"
+              required
             />
           </div>
           <div class="column is-12">
-            <!-- ?? Submit text needs to be centered ?? done --> 
+            <!-- ?? Submit text needs to be centered ?? done -->
             <a href="results.html">
               <button
                 type="submit"
-                id="destination"
-                class="button submit-button mx-2 my-2 input is-normal has-text-weight-bold has-text-centered	"
+                class="button submit-button mx-2 my-2 input is-normal has-text-weight-bold has-text-centered"
                 value="submit"
               >
                 Submit
@@ -131,7 +142,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </form>
 
     <!-- FOOTER -->
     <!-- ?? Still working on getting the footer to be sticky to the bottom of the page (not built into Bulma for some reason) -->
@@ -145,6 +156,7 @@
     </footer>
 
     <!-- SCRIPT FILES -->
+    <script src="./assets/js/flight-info.js"></script>
     <!-- DATEPICKER API's -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>

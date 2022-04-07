@@ -1,48 +1,57 @@
 :root {
-    --background-color: #fef7f2;
-    --font-color: #7b716d;
-    --black: #000000;
-    --button-color: #cbc0b9;
+  --background-color: #fef7f2;
+  --font-color: #7b716d;
+  --black: #000000;
+  --button-color: #cbc0b9;
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Quicksand', sans-serif;
-    background: var(--background-color);
-    color: var(--font-color);
-    min-height: 100vh;
+  font-family: "Quicksand", sans-serif;
+  background: var(--background-color);
+  color: var(--font-color);
+  min-height: 100vh;
 }
 
 .navbar,
 .footer {
-    background-color: var(--background-color);
-    color: var(--font-color);
+  background-color: var(--background-color);
+  color: var(--font-color);
 }
 
 .user-input {
-    margin-left: 15%;
-    margin-right: 15%;
-    border: 2px solid var(--font-color);
-    border-radius: 15px;
-    /* ?? not sure why this box-shadow isn't working ?? */
-    box-shadow: 5px, 10px, 20px var(--font-color);
+  margin-left: 15%;
+  margin-right: 15%;
+  border: 2px solid var(--font-color);
+  border-radius: 15px;
+  /* ?? not sure why this box-shadow isn't working ?? */
+  box-shadow: 5px, 10px, 20px var(--font-color);
 }
 
+/* #departure-date,
+#return-date::-webkit-calendar-picker-indicator {
+  /* padding-left: 300px;
+  border: 1px dashed red;
+} */
 
 .submit-button {
-    background-color: var(--button-color);
-    color: var(--background-color);
+  background-color: var(--button-color);
+  color: var(--background-color);
 }
 
 .about-us {
-    color: var(--font-color);
+  color: var(--font-color);
 }
 
 .footer {
-    margin-top: auto;
+  margin-top: auto;
 }
 
+.flight-info {
+    display: flex;
+    justify-content: space-between;
+}

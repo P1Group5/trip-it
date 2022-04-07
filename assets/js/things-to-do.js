@@ -112,7 +112,6 @@ function onShowPOI(data) {
         : data.info
             ? data.info.descr
             : "No description";
-
     poi.innerHTML += `<p><a target="_blank" href="${data.otm}">Show more at OpenTripMap</a></p>`;
 };
 */
