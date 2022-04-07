@@ -1,48 +1,56 @@
-var destinationNameEl = document.querySelector("#destination");
-var currentWeatherEl = document.querySelector("#currentWeather");
-var apiKey = VW4KTQT545MEZVT7VAMGJX9F5;
+//flight data
+// date format must be yyyy-mm-dd
+var departureDate = "2022-04-10";
+var returnDate = "2022-04-20";
+// locations must be airport code (eg.YYZ for toronto)
+var departureAirport = "YYZ";
+var arrivalAirport = "LAX";
+var flightContainerEL = document.querySelector("#flights-container");
 
-// getting the city name from the user input from the index.html page
-var city = function () {
-  var destinationName = destinationNameEl.value;
+var getFlights = function(flights) {
+    var flightUrl = "https://www.expedia.com:443/api/flight/search?departureDate=" + departureDate + "&returnDate=" + returnDate + "&departureAirport=" + departureAirport + "&arrivalAirport=" + arrivalAirport + "&prettyPrint=true&maxOfferCount=9";
 
-  currentWeatherEl.innerHTML = "";
-  getCityWeather(destinationName);
-};
-
-// weather API fetch (for future 15day forecast)
-var getCityWeather = function (city) {
-  fetch(
-    "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/" +
-      city +
-      "unitGroup=metric" +
-      "&" +
-      apiKey +
-      "&contentType=json",
-    {
-      method: "GET",
-      headers: {},
-    }
-  )
-    .then((response) => {
-      if (!response.ok) {
-        throw response; //check the http response code and if isn't ok then throw the response as an error
-      }
-
-      return response.json(); //parse the result as JSON
-    })
-    .then((response) => {
-      //response now contains parsed JSON ready for use
-      processWeatherData(response);
-    })
-    .catch((errorResponse) => {
-      if (errorResponse.text) {
-        //additional error information
-        errorResponse.text().then((errorMessage) => {
-          //errorMessage now returns the response body which includes the full error message
-        });
-      } else {
-        //no additional error information
-      }
+    fetch(flightUrl).then(function(response) {
+        // request was successful
+        if (response.ok) {
+            response.json().then(function(data) {
+                // pass response to DOM function
+                // once ready, replace console.log(data); with displayFlights(data);
+                displayFlights(data);
+            });
+        }
+        else {
+            // if not successful, redirect to indexpage
+            document.location.replace("./index.html");
+        }
     });
 };
+
+var displayFlights = function(flights) {
+  console.log(flights)
+
+  // clear old content
+  flightContainerEL.textContent = "";
+  //loop over offers
+  for (var i = 0; i < flights.legs.length; i++) {
+    // format offer info
+    var flightInfo = flights.legs[i].segments[0].airlineName + flights.legs[i].segments[0].departureTime;
+
+    // create a container for each flight
+    var flightEl = document.createElement("a");
+    flightEl.classList = "list-item flex-row justify-space-between align-center";
+    flightEl.setAttribute("href", flights.legs[i].baggageFeesUrl)
+
+    // create a span element to hold flight info
+    var titleEl = document.createElement("span");
+    titleEl.textContent = flightInfo;
+
+    // append container
+    flightEl.appendChild(titleEl);
+
+    // append container to the dom
+    flightContainerEL.appendChild(flightEl);
+  }
+};
+
+getFlights();
