@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trip It!</title>
 
+
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,6 +21,10 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
     />
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    
+    <!-- JQuery CSS used to style the autocomplete widget -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css">
+
   </head>
 
   <body>
@@ -63,60 +68,66 @@
       </article>
     </section>
 
+    <!-- Loads JQuery code used for the autocomplete function -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
     <!-- TRAVEL INFO CONTAINER -->
     <section class="user-input section px-6 py-6">
       <div class="container is-flex is-flex-wrap-wrap">
         <div class="columns is-flex-wrap-wrap">
           <!-- ?? Need to link expedia API to location/destinations ?? -->
-          <div class="column is-6">
+          <div class="ui-widget column is-6">
             <label class="mx-2 my-2 has-text-weight-bold">Where From?</label>
             <input
               type="text"
+              id="location-input"
               class="mx-2 my-2 input is-normal"
               placeholder="Flying From"
             />
           </div>
-          <div class="column is-6">
+          <div class="ui-widget column is-6">
             <label class="mx-2 my-2 has-text-weight-bold">Where To?</label>
             <input
               type="text"
+              id="destination-input"
               class="mx-2 my-2 input is-normal"
               placeholder="Flying To"
             />
           </div>
-          <!-- Calendar looks funky but it's functional, just need to tie it into the flight and weather -->
+
+          <!-- ?? Need to link a calendar to these inputs ?? done -->
+
           <div class="column is-6">
             <label class="mx-2 my-2 has-text-weight-bold">When are you going?</label>
             <label class="mx-2 my-2 has-text-weight-bold"
               >When are you Leaving?</label
             >
             <input
-              type="text"
+              type="date"
               class="datePicker mx-2 my-2 input is-normal"
-              placeholder="mm/dd/yyyy"
+              placeholder="YYYY/MM/DD"
               id="datePicker-going"
-              autocomplete="off"
             />
           </div>
           <div class="column is-6">
             <label class="mx-2 my-2 has-text-weight-bold"
               >When are you coming home?</label
             >
-            <input
-              type="text"
+             <input
+              type="date"
               class="datePicker mx-2 my-2 input is-normal"
-              placeholder="mm/dd/yyyy"
-              id="datePicker-home"
-              autocomplete="off"
+              placeholder="YYYY/MM/DD"
+              id="datePicker-going"
             />
           </div>
           <div class="column is-12">
-            <!-- ?? Submit text needs to be centered ?? -->
+            <!-- ?? Submit text needs to be centered ?? done --> 
             <a href="results.html">
               <button
                 type="submit"
                 id="destination"
-                class="submit-button mx-2 my-2 input is-normal has-text-weight-bold"
+                class="button submit-button mx-2 my-2 input is-normal has-text-weight-bold has-text-centered	"
                 value="submit"
               >
                 Submit
@@ -144,7 +155,9 @@
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <!-- LOCAL SCRIPT FILES -->
     <script src="./assets/js/script.js"></script>
+    <!-- loads the list of airports with labels and values -->
     <script src="./assets/js/airports-array.js"></script>
+    <!-- Autocomplete function written using JQueryUI -->
     <script src="./assets/js/autocomplete.js"></script>
     <script src="./assets/js/date-picker.js"></script>
   </body>
