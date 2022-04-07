@@ -77,7 +77,7 @@
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 
     <!-- TRAVEL INFO CONTAINER -->
-    <section class="user-input section px-6 py-6">
+    <form action="./results.html" class="user-input section px-6 py-6">
       <div class="container is-flex is-flex-wrap-wrap">
         <div class="columns is-flex-wrap-wrap">
           <!-- ?? Need to link expedia API to location/destinations ?? -->
@@ -88,6 +88,7 @@
               id="location-input"
               class="mx-2 my-2 input is-normal"
               placeholder="Flying From"
+              required
             />
           </div>
           <div class="ui-widget column is-6">
@@ -97,12 +98,13 @@
               id="destination-input"
               class="mx-2 my-2 input is-normal"
               placeholder="Flying To"
+              required
             />
           </div>
 
           <!-- ?? Need to link a calendar to these inputs ?? done -->
 
-          <div class="column is-6">
+          <div class="column is-6" id="datechoice">
             <label class="mx-2 my-2 has-text-weight-bold"
               >When are you going?</label
             >
@@ -111,9 +113,10 @@
               class="mx-2 my-2 input is-normal"
               placeholder="YYYY/MM/DD"
               id="departure-date"
+              required
             />
           </div>
-          <div class="column is-6">
+          <div class="column is-6" id="datechoice">
             <label class="mx-2 my-2 has-text-weight-bold"
               >When are you returning?</label
             >
@@ -122,6 +125,7 @@
               class="mx-2 my-2 input is-normal"
               placeholder="YYYY/MM/DD"
               id="return-date"
+              required
             />
           </div>
           <div class="column is-12">
@@ -138,7 +142,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </form>
 
     <!-- FOOTER -->
     <!-- ?? Still working on getting the footer to be sticky to the bottom of the page (not built into Bulma for some reason) -->
