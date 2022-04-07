@@ -19,11 +19,11 @@ var savedCities = JSON.parse(localStorage.getItem("recentCities")) || [];
 
 // saved cities
 
-function saveRecentCities(city) {
-  savedCities.push(city);
-  localStorage.setItem("recentCities", JSON.stringify(savedCities));
-  generateSearchHistory();
-}
+// function saveRecentCities(city) {
+//   savedCities.push(city);
+//   localStorage.setItem("recentCities", JSON.stringify(savedCities));
+//   generateSearchHistory();
+// }
 
 // showing recent searches
 
