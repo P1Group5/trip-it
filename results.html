@@ -22,18 +22,26 @@
     <!-- ?? need assistance with keeping the nav bar links to the right when browser size is adjusted ?? -->
     <nav class="navbar is-transparent is-flex is-flex-wrap-wrap">
         <div class="navbar-brand">
-            <a href="./index.html">
-                <img
-                  class="logo"
-                  src="./assets/images/Trip-It-Words-Beside (500 × 100 px) (300 × 100 px) (1).png"
-              /></a>
+          <a href="./index.html">
+            <img
+              class="logo"
+              src="./assets/images/Trip-It-Words-Beside (500 × 100 px) (300 × 100 px) (1).png"
+          /></a>
         </div>
-        <div class="navbar-end is-flex is-flex-wrap-wrap is-align-content-flex-end">
-            <a href="./travel-tips.html" class="navbar-item has-text-weight-bold">Travel Tips</a>
-            <a onclick="history.back()" class="navbar-item has-text-weight-bold"
+        <div
+          class="navbar-end is-flex is-flex-wrap-wrap is-align-content-flex-end"
+        >
+          <a href="./travel-tips.html" class="navbar-item has-text-weight-bold"
+            >Travel Tips</a
+          >
+          <a onclick="history.back()" class="navbar-item has-text-weight-bold"
             >Go Back</a
           >
-    </nav>
+          <a href="./weather.html" class="navbar-item has-text-weight-bold"
+            >Weather</a
+          >
+        </div>
+      </nav>
 
     <!-- RESULTS SECTION -->
     <section class="results-page container">
@@ -41,13 +49,20 @@
         <article class="columns">
             <div class="column">
                 <!-- ?? have JS linked to this so the destination name displays in h2 ?? -->
-                <h2 class="intro-style column is-size-1 has-text-centered has-text-weight-bold">Placeholder Destination Name</h2>
+                <h2 id="destinationLocation" class="intro-style column is-size-1 has-text-centered has-text-weight-bold">Placeholder Destination Name</h2>
                 <!-- ?? have JS link the departure and arrival of trip in h3 ?? -->
-                <h3 class="slogan column has-text-centered is-size-4 has-text-weight-bold">Placeholder Destination Date</h3>
-                <h4 class="slogan column has-text-centered is-size-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                <h3 id="destinationDate" class="column has-text-centered is-size-4 has-text-weight-bold">Placeholder Destination Date</h3>
+                <h4 class="column has-text-centered is-size-5 mb-6">Everything you need to know, before you pack your bags</h4>
             </div>
         </article>
     </section>
+
+    <!-- weather button to show weather app from other page to this page
+    <div id="topBar">
+        <a href ="./weather.html" id="load_home"> Weather </a>
+    </div>
+    <div id ="content">        
+    </div> -->
 
     <!-- USER RESULTS -->
     <section class="container">
@@ -64,109 +79,97 @@
 
                 <!-- WEATHER -->
                 <div class="output-data column is-3 has-text-centered">
-                    <h4 class="is-size-5 has-text-weight-bold">Weather Info</h4>
+                    <h4 class="is-size-5 has-text-weight-bold mx-2 my-2">Weather Info</h4>
                     <section class="container mx-2 my-2">
                         <article class="columns is-flex is-flex-direction-column is-full">
-                            <!-- 10 DIFFERENT FLIGHT OPTIONS -->
-                            <!-- ?? Need to get the bottom of this container to end at the end of the fourth div -->
-                            <div class="weather-options column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
-                            </div>
-                            <div class="weather-options column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
-                            </div>
-                            <div class="weather-options column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
-                            </div>
-                            <div class="weather-options column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
-                            </div>
+                            <button type="button" id="currentWeatherBtn" class="weather-options button column my-3 is-normal open">
+                                Current Weather
+                            </button>
+
+                            <button type="button" id="weeklyWeatherBtn" class="weather-options button column my-3 is-normal">
+                                7-Day Forecast
+                            </button>
+
+                            <button type="button" id="biWeeklyWeatherBtn" class="weather-options button column my-3 is-normal">
+                                14-Day Forecast
+                            </button>
+
+                            <button type="button" id="monthlyWeatherBtn" class="weather-options button column my-3 is-normal"> 
+                                30-Day Forecast
+                            </button>
                         </article>
                     </section>    
                 </div>
 
                 <!-- THINGS TO DO -->
                 <div class="output-data column is-3 has-text-centered">
-                    <h4 class="is-size-5 has-text-weight-bold">Things To Do</h4>
+                    <h4 class="is-size-5 has-text-weight-bold mx-2 my-2">Things To Do</h4>
                     <section class="container mx-2 my-2">
-                        <article class="columns is-flex is-flex-direction-column is-full">
-                            <!-- 10 DIFFERENT FLIGHT OPTIONS -->
-                            <!-- ?? Need to get the bottom of this container to end at the end of the fourth div -->
-                            <div class="things-to-do column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
-                            </div>
-                            <div class="things-to-do column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
-                            </div>
-                            <div class="things-to-do column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
-                            </div>
-                            <div class="things-to-do column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
-                            </div>
-                            <div class="things-to-do column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
-                            </div>
-                            <div class="things-to-do column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
-                            </div>
-                            <div class="things-to-do column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
-                            </div>
-                            <div class="things-to-do column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
-                            </div>
-                            <div class="things-to-do column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
-                            </div>
-                            <div class="things-to-do column my-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
-                            </div>
+                       
                         </article>
                     </section> 
                 </div>
+
         </article>
     </section>
     
+    <!-- MODAL -->
+    <!-- CURRENT WEATHER MODAL -->
+    <div class="modal current-weather-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content has-background-white py-5 px-5">
+            <h3 class="title mb-6">Current Weather</h3>
+            <h4 class="is-size-5 has-text-centered">Placeholder Location</h4>
+            <h4 class="is-size-5 has-text-centered">Placeholder Forecast</h4>
+        </div>
+    </div>
+
+    <!-- WEEKLY WEATHER MODAL -->
+    <div class="modal weekly-weather-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content has-background-white py-5 px-5">
+            <h3 class="title mb-6">7-Day Forecast</h3>
+            <h4 class="is-size-5 has-text-centered">Placeholder Location</h4>
+            <h4 class="is-size-5 has-text-centered">Placeholder Forecast</h4>
+        </div>
+    </div>
+
+    <!-- BIWEEKLY WEATHER MODAL -->
+    <div class="modal biweekly-weather-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content has-background-white py-5 px-5">
+            <h3 class="title mb-6">14-Day Forecast</h3>
+            <h4 class="is-size-5 has-text-centered">Placeholder Location</h4>
+            <h4 class="is-size-5 has-text-centered">Placeholder Forecast</h4>
+        </div>
+    </div>
+
+    <!-- MONTHLY WEATHER MODAL -->
+    <div class="modal monthly-weather-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content has-background-white py-5 px-5">
+            <h3 class="title mb-3 has-text-centered">30-Day Forecast</h3>
+            <h4 class="is-size-5 has-text-centered">Placeholder Location</h4>
+            <h4 class="is-size-5 has-text-centered">Placeholder Forecast</h4>
+        </div>
+    </div>
 
     <!-- FOOTER -->
     <!-- ?? Still working on getting the footer to be sticky to the bottom of the page (not built into Bulma for some reason) -->
     <footer class="footer">
         <div class="content has-text-centered">
-            <a href="#about-us-modal" class="about-us has-text-weight-bold px-4">About Us</a>
+            <a href="./about-us.html" class="about-us has-text-weight-bold px-4">About Us</a>
             &copy; 2022 Trip It
         </div>
     </footer>
 
     <!-- SCRIPT FILES -->
     <script src="./assets/js/flight-info.js"></script>
+     <!-- DATEPICKER API's -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>  
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/things-to-do.js"></script>
+    <script src="./assets/js/weather-seperate-page.js"></script>
 </body>
 </html>
