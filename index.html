@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trip It!</title>
 
-
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,10 +20,12 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
     />
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    
-    <!-- JQuery CSS used to style the autocomplete widget -->
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css">
 
+    <!-- JQuery CSS used to style the autocomplete widget -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css"
+    />
   </head>
 
   <body>
@@ -47,6 +48,9 @@
         >
         <a onclick="history.back()" class="navbar-item has-text-weight-bold"
           >Go Back</a
+        >
+        <a href="./weather.html" class="navbar-item has-text-weight-bold"
+          >Weather</a
         >
       </div>
     </nav>
@@ -99,7 +103,9 @@
           <!-- ?? Need to link a calendar to these inputs ?? done -->
 
           <div class="column is-6">
-            <label class="mx-2 my-2 has-text-weight-bold">When are you going?</label>
+            <label class="mx-2 my-2 has-text-weight-bold"
+              >When are you going?</label
+            >
             <input
               type="date"
               class="mx-2 my-2 input is-normal"
@@ -108,8 +114,10 @@
             />
           </div>
           <div class="column is-6">
-            <label class="mx-2 my-2 has-text-weight-bold">When are you returning?</label>
-             <input
+            <label class="mx-2 my-2 has-text-weight-bold"
+              >When are you returning?</label
+            >
+            <input
               type="date"
               class="mx-2 my-2 input is-normal"
               placeholder="YYYY/MM/DD"
@@ -117,12 +125,12 @@
             />
           </div>
           <div class="column is-12">
-            <!-- ?? Submit text needs to be centered ?? done --> 
+            <!-- ?? Submit text needs to be centered ?? done -->
             <a href="results.html">
               <button
                 type="submit"
                 id="destination"
-                class="button submit-button mx-2 my-2 input is-normal has-text-weight-bold has-text-centered	"
+                class="button submit-button mx-2 my-2 input is-normal has-text-weight-bold has-text-centered"
                 value="submit"
               >
                 Submit
