@@ -1,21 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trip It! - Results</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+<!-- FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap"
+  rel="stylesheet"
+/>
 
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap" rel="stylesheet">
-    <!-- STYLE SHEETS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" >
-    <link rel="stylesheet" href="./assets/css/results-page.css">
-</head>
+<!-- STYLE SHEETS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+/>
+<link rel="stylesheet" href="./assets/css/styles.css" />
 
-<body>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
     <!-- background video -->
     <video autoplay muted loop id="bgVideo">
       <source src="./assets/images/clouds.mp4" type="video/mp4" />
@@ -23,6 +44,8 @@
     </video>
 
     <!-- navbar -->
+    <!-- NAV BAR -->
+    <!-- ?? need assistance with keeping the nav bar links to the right when browser size is adjusted ?? -->
     <nav class="navbar is-transparent is-flex is-flex-wrap-wrap">
         <div class="navbar-brand">
           <a href="./index.html">
@@ -37,11 +60,11 @@
           <a href="./travel-tips.html" class="navbar-item has-text-weight-bold"
             >Travel Tips</a
           >
+                    <a href="./weather.html" class="navbar-item has-text-weight-bold"
+            >Weather</a
+          >
           <a onclick="history.back()" class="navbar-item has-text-weight-bold"
             >Go Back</a
-          >
-          <a href="./weather.html" class="navbar-item has-text-weight-bold"
-            >Weather</a
           >
         </div>
       </nav>
@@ -86,6 +109,23 @@
   </div>
 </div>
 </div>
+
+    <!-- FOOTER -->
+    <!-- ?? Still working on getting the footer to be sticky to the bottom of the page (not built into Bulma for some reason) -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <a href="./about-us.html" class="about-us has-text-weight-bold px-4">About Us</a>
+            &copy; 2022 Trip It
+        </div>
+    </footer>
+
+    
+    <!-- SCRIPT FILES -->
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/airports-array.js"></script>
+    <script src="./assets/js/autocomplete.js"></script>
+ 
+
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="assets/js/weather-seperate-page.js"></script>
