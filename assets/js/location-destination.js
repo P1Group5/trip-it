@@ -45,3 +45,17 @@ $("#location-input").change(function () {
     sessionStorage.setItem("locationCity", locationCity);
     sessionStorage.setItem("locationCountry", locationCountry);
 });
+
+// this function is triggered by a change on the input form
+$("#departure-date").change(function () {
+    var departureDate = document.getElementById("departure-date").value;
+    console.log(departureDate);
+    sessionStorage.setItem("departureDate", departureDate);
+});
+
+// this function is triggered by a change on the input form
+$("#return-date").change(function () {
+    var returnDate = document.getElementById("return-date").value;
+    console.log(returnDate);
+    sessionStorage.setItem("returnDate", returnDate);
+});
