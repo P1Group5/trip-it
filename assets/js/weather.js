@@ -1,5 +1,9 @@
 var destinationNameEl = document.querySelector("#destination");
 var currentWeatherEl = document.querySelector("#currentWeather");
+
+// var cityName = sessionStorage.getItem("destinationCity");
+// var destinationCountry = sessionStorage.getItem("destinationCountry");
+
 var apiKey = "VW4KTQT545MEZVT7VAMGJX9F5";
 
 // getting the city name from the user input from the index.html page
