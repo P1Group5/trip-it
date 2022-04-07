@@ -3,7 +3,20 @@ var departureDate = sessionStorage.getItem("departureDate");
 var returnDate = sessionStorage.getItem("returnDate");
 var departureAirport = sessionStorage.getItem("locationIata");
 var arrivalAirport = sessionStorage.getItem("destinationIata");
+var destination = sessionStorage.getItem("destinationCity");
 var flightContainerEL = document.querySelector("#flights-container");
+var destinationEl = document.querySelector("#destinationLocation");
+var arrivalDateEl = document.querySelector("#destinationDate");
+
+var displayDestination = function() {
+    // clear old content
+    destinationEl.textContent = "";
+    arrivalDateEl.textContent = "";
+
+    // add new location and data
+    destinationEl.textContent = destination;
+    arrivalDateEl.textContent = departureDate;
+}();
 
 var getFlights = function(flights) {
     var flightUrl = "https://www.expedia.com:443/api/flight/search?departureDate=" + departureDate + "&returnDate=" + returnDate + "&departureAirport=" + departureAirport + "&arrivalAirport=" + arrivalAirport + "&maxOfferCount=9";
