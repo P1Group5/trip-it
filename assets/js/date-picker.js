@@ -1,9 +1,18 @@
+// DATE PICKER FUNCTIONALITY
 $("#datePicker-going").datepicker({
 
 });
 
 $("#datePicker-home").datepicker({
 
+});
+
+// NAVBAR MENU MOBILE
+var burgerIcon = document.querySelector("#burger");
+var navbarMenu = document.querySelector("#nav-links");
+
+burgerIcon.addEventListener("click", function () {
+    navbarMenu.classList.toggle("is-active");
 });
 
 // MODALS

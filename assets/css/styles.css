@@ -17,32 +17,33 @@ body {
   min-height: 100vh;
 }
 
+/* Navbar & Footer On All Pages */
 .navbar,
 .footer {
   background-color: var(--background-color);
   color: var(--font-color);
 }
 
+/* Landing Page Start */
 .user-input {
   margin-left: 15%;
   margin-right: 15%;
   border: 2px solid var(--font-color);
   border-radius: 15px;
-  /* ?? not sure why this box-shadow isn't working ?? */
-  box-shadow: 5px, 10px, 20px var(--font-color);
 }
-
-/* #departure-date,
-#return-date::-webkit-calendar-picker-indicator {
-  /* padding-left: 300px;
-  border: 1px dashed red;
-} */
 
 .submit-button {
   background-color: var(--button-color);
   color: var(--background-color);
 }
+/* Landing Page End */
 
+/* Results Page */
+.output-data {
+  margin
+}
+
+/* Bottom On All Pages */
 .about-us {
   color: var(--font-color);
 }
@@ -55,3 +56,14 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+  /* Results Page */
+  .results-data {
+    margin: 10px;
+  }
+}
+
+

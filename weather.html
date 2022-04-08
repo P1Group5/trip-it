@@ -1,113 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap" rel="stylesheet" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap" rel="stylesheet" />
 
-    <!-- STYLE SHEETS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
-    <link rel="stylesheet" href="./assets/css/weather.css" />
-    <title>Trip It - Weather</title>
-  </head>
+  <!-- STYLE SHEETS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+  <link rel="stylesheet" href="./assets/css/weather.css" />
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <title>Trip It - Weather</title>
+</head>
 
-  <body>
+<body>
 
-    <!-- NAV BAR -->
-    <nav class="navbar is-transparent is-flex is-flex-wrap-wrap">
-      <div class="navbar-brand">
-        <a href="./index.html">
-          <img class="logo" src="./assets/images/Trip-It-Words-Beside (500 × 100 px) (300 × 100 px) (1).png" /></a>
-      </div>
-      <div class="navbar-end is-flex is-flex-wrap-wrap is-align-content-flex-end">
+  <!-- NAV BAR -->
+  <nav class="navbar is-transparent">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="./index.html">
+        <img class="logo" src="./assets/images/Trip-It-Words-Beside (500 × 100 px) (300 × 100 px) (1).png"
+          alt="Trip-It Logo" style="max-height: 100px" />
+      </a>
+      <!-- works on all pages except weather.html and travel-tips.html -->
+      <a class="navbar-burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+    <div id="nav-links" class="navbar-menu">
+      <div class="navbar-end">
         <a href="./travel-tips.html" class="navbar-item has-text-weight-bold">Travel Tips</a>
         <a href="./weather.html" class="navbar-item has-text-weight-bold">Weather</a>
         <a onclick="history.back()" class="navbar-item has-text-weight-bold">Go Back</a>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-        <!-- WEATHER SECTION -->
-    <section class="container">
-      <!-- INTRO -->
-      <article class="columns">
-          <div class="column">
-              <h2 id="destinationLocation" class="intro-style column is-size-1 has-text-centered has-text-weight-bold">Find The Perfect Weather</h2>
-              <h4 class="column has-text-centered is-size-5 mb-6">For Your Next Trip.... With A Little Help From Trip It</h4>
-          </div>
-      </article>
+  <!-- WEATHER SECTION -->
+  <section class="container">
+    <!-- INTRO -->
+    <article class="columns">
+      <div class="column">
+        <h2 id="destinationLocation" class="intro-style column is-size-1 has-text-centered has-text-weight-bold">Find
+          The Perfect Weather</h2>
+        <h4 class="column has-text-centered is-size-5 mb-6">For Your Next Trip.... With A Little Help From Trip It</h4>
+      </div>
+    </article>
   </section>
 
-    <div class="container">
-      <div class="columns">
-        <!-- search bar content -->
-        <div class="cityDisplay column is-6">
-          <h4 class="px-3 py-3 is-size-2 has-text-centered">Search for a city:</h4>
+  <div class="container">
+    <div class="columns">
+      <!-- search bar content -->
+      <div class="cityDisplay is-6 column">
+        <h4 class="px-3 py-3 is-size-2 column has-text-centered">Search for a city:</h4>
 
-          <div class="input-group column">
-            <input type="text" class="searchCity input is-normal" placeholder="Enter City Name" />
+        <div class="input-group column">
+          <input type="text" class="searchCity input is-normal" placeholder="Enter City Name" />
+        </div>
+        <div class="is-flex is-flex-wrap-wrap">
+          <div class="searchBtn column is-flex is-justify-content-flex-end">
+            <button type="button"
+              class="submit-button button is-normal has-text-weight-bold has-text-centered">
+              Search
+            </button>
           </div>
-          <div class="is-flex is-flex-wrap-wrap">
-            <div class="searchBtn column is-flex is-flex-wrap-wrap">
-              <button type="button" class="submit-button button is-normal my-4 mx-4 has-text-weight-bold has-text-centered is-justify-content-center">
-                Search
-              </button>
-            </div>
-            <!-- <hr class="divider" /> -->
-            <div class="column is-flex is-flex-wrap-wrap">
-              <button class="clear-history clear-history-button button is-normal my-4 mx-4 has-text-weight-bold has-text-centered is-justify-content-center" type="button">Clear History</button>
-              <div class="history"></div>
-            </div>
+          <!-- <hr class="divider" /> -->
+          <div class="column is-flex is-justify-content-flex-start">
+            <button
+              class="clear-history clear-history-button button is-normal has-text-weight-bold has-text-centered"
+              type="button">Clear History</button>
+            <div class="history"></div>
           </div>
         </div>
+      </div>
 
-        <!-- weather displayed  -->
-        <div class="displayWeather column is-6 is-flex is-flex-wrap-wrap">
+      <!-- weather displayed  -->
+      <div class="container">
+        <div class="displayWeather columns is-6">
+          <div class=""></div>
           <div class="currentWeather"></div>
 
-          <div class="futureForecast column is-flex is-flex-wrap-wrap">
+          <div class="futureForecast column">
             <h5 class="forecastHeading px-3 py-3 is-size-2 has-text-centered">5-Day Forecast:</h5>
             <div class="container">
               <div class="columns is-full">
-              <div class="day1 column is-one-fifth"></div>
-              <div class="day2 column is-one-fifth"></div>
-              <div class="day3 column is-one-fifth"></div>
-              <div class="day4 column is-one-fifth"></div>
-              <div class="day5 column is-one-fifth"></div>
-            </div>
+                <div class="day1 column is-one-fifth"></div>
+                <div class="day2 column is-one-fifth"></div>
+                <div class="day3 column is-one-fifth"></div>
+                <div class="day4 column is-one-fifth"></div>
+                <div class="day5 column is-one-fifth"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-      <!-- FOOTER -->
-      <!-- ?? Still working on getting the footer to be sticky to the bottom of the page (not built into Bulma for some reason) -->
-      <footer class="footer">
-        <div class="content has-text-centered">
-          <a href="./about-us.html" class="about-us has-text-weight-bold px-4">About Us</a>
-          &copy; 2022 Trip It
-        </div>
-      </footer>
+    <!-- FOOTER -->
+    <!-- ?? Still working on getting the footer to be sticky to the bottom of the page (not built into Bulma for some reason) -->
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <a href="./about-us.html" class="about-us has-text-weight-bold px-4">About Us</a>
+        &copy; 2022 Trip It
+      </div>
+    </footer>
 
 
-      <!-- SCRIPT FILES -->
-      <script src="./assets/js/script.js"></script>
-      <script src="./assets/js/airports-array.js"></script>
-      <script src="./assets/js/autocomplete.js"></script>
+    <!-- SCRIPT FILES -->
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/airports-array.js"></script>
+    <script src="./assets/js/autocomplete.js"></script>
+    <!-- loads datepicker and mobile navbar -->
+    <script src="./assets/js/date-picker.js"></script>
 
 
-      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-      <script src="assets/js/weather-seperate-page.js"></script>
-  </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="assets/js/weather-seperate-page.js"></script>
+</body>
 
 </html>
