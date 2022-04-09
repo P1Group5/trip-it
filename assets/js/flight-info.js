@@ -4,9 +4,28 @@ var returnDate = sessionStorage.getItem("returnDate");
 var departureAirport = sessionStorage.getItem("locationIata");
 var arrivalAirport = sessionStorage.getItem("destinationIata");
 var destination = sessionStorage.getItem("destinationCity");
+var departureCity = sessionStorage.getItem("locationCity")
 var flightContainerEL = document.querySelector("#flights-container");
 var destinationEl = document.querySelector("#destinationLocation");
 var arrivalDateEl = document.querySelector("#destinationDate");
+
+// departure date for link URL format = 23%2F04%2F2022 (dd%2Fmm%2Fyyyy)
+var depData = function () {
+    var depDate = departureDate
+    let dateData = depDate.split("-")
+    var depDate = dateData[2] + "%2F" + dateData[1] + "%2F" + dateData[0]
+    return depDate;
+};
+var urlDepartureDate = depData();
+
+// return date for link URL
+var retData = function () {
+    var retDate = returnDate
+    let dateData = retDate.split("-")
+    var retDate = dateData[2] + "%2F" + dateData[1] + "%2F" + dateData[0]
+    return retDate;
+};
+var urlReturnDate = retData();
 
 var displayDestination = function() {
     // clear old content
@@ -18,7 +37,7 @@ var displayDestination = function() {
     arrivalDateEl.textContent = departureDate;
 }();
 
-var getFlights = function(flights) {
+var getFlights = function() {
     var flightUrl = "https://www.expedia.com:443/api/flight/search?departureDate=" + departureDate + "&returnDate=" + returnDate + "&departureAirport=" + departureAirport + "&arrivalAirport=" + arrivalAirport + "&maxOfferCount=9";
 
     fetch(flightUrl).then(function(response) {
@@ -26,7 +45,6 @@ var getFlights = function(flights) {
         if (response.ok) {
             response.json().then(function(data) {
                 // pass response to DOM function
-                // once ready, replace console.log(data); with displayFlights(data);
                 displayFlights(data);
             });
         }
@@ -38,23 +56,32 @@ var getFlights = function(flights) {
 };
 
 var displayFlights = function(flights) {
-  console.log(flights)
+  console.log(flights);
 
   // clear old content
   flightContainerEL.textContent = "";
   //loop over offers
-  for (var i = 0; i < flights.legs.length; i++) {
-    // format offer info
-    var flightInfo = "<span class = 'flight-info'>" + flights.legs[i].segments[0].airlineName + "-" + flights.legs[i].segments[0].departureTime + "</span>";
+  for (var i = 0; i < flights.offers.length; i++) {
+    
+    // format airlineName
+    var airlineName = "<span class = 'flight-info'>" + flights.legs[i].segments[0].airlineName + ":" + "</span>";
+    // format departureDateAndTime
+    var departureDateAndTime = "<span class = 'flight-info'>" + "Leaving from " + (departureCity) + " on " + flights.legs[i].segments[0].departureTime + "</span>";
+    // format returnDateAndTime
+    //var returnDateAndTime = "<span class = 'flight-info'>" + "Returning from " + (destination) + " on " + flights.legs[i].segments[1].departureTime + "</span>";    
+    // format baseFare
+    var baseFare = "<span class = 'flight-info'>" + "Base fare in USD " + flights.offers[i].totalPrice.formattedPrice + "</span>";
+    // format seatsRemaining
+    var seatsRemaining = "<span class = 'flight-info'>" + "remaining seats: " + flights.offers[i].seatsRemaining + "</span>";
 
     // create a container for each flight
     var flightEl = document.createElement("a");
     flightEl.classList = "flight-options column my-3 has-text-centered";
-    flightEl.setAttribute("href", "https://www.expedia.ca/Flights?langid=4105&semcid=CA.MULTILOBF.GOOGLE.GT-c-EN.FLIGHT&SEMDTL=a1343588247.b122666585007.r1.g1aud-1210701017259:kwd-18734303544.i1.d1587522981736.e1c.j19000858.k1.f1.n1.l1g.h1b.m1&gclid=Cj0KCQjwl7qSBhD-ARIsACvV1X2hUua4QAi4xyNwpan2GKQFfb6oeD3BT3oEsZ0j61qvkMxmgqTpG_0aAv8eEALw_wcB")
+    flightEl.setAttribute("href", "https://www.expedia.ca/Flights-Search?flight-type=on&mode=search&trip=roundtrip&leg1=from%3A" + departureAirport + "%29%2Cto%3A" + arrivalAirport + "%29%2Cdeparture%3A" + urlDepartureDate + "TANYT&options=cabinclass%3Aeconomy&leg2=from%3A" + arrivalAirport + "%29%2Cto%3A" + departureAirport + "%29%2Cdeparture%3A" + urlReturnDate + "TANYT&passengers=children%3A0%2Cadults%3A1%2Cseniors%3A0%2Cinfantinlap%3AY&fromDate=" + urlDepartureDate + "&toDate=" + urlReturnDate + "&d1=" + departureDate + "&d2=" + returnDate)
 
     // create a span element to hold flight info
     var titleEl = document.createElement("span");
-    titleEl.innerHTML = flightInfo;
+    titleEl.innerHTML = airlineName + departureDateAndTime + baseFare + seatsRemaining;
 
     // append container
     flightEl.appendChild(titleEl);
