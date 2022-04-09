@@ -60,9 +60,20 @@ var displayFlights = function(flights) {
 
   // clear old content
   flightContainerEL.textContent = "";
+
+// check if there are any available flights
+if(flights.offers.length === 0) {
+    var flightEl = document.createElement("a");
+    flightEl.classList = "flight-options column my-3 has-text-centered";
+    var titleEl = document.createElement("span");
+    titleEl.innerHTML = "Sorry, there were no flights available!";
+    flightEl.appendChild(titleEl);
+    flightContainerEL.appendChild(flightEl);
+    return;
+    }
+  
   //loop over offers
   for (var i = 0; i < flights.offers.length; i++) {
-    
     // format airlineName
     var airlineName = "<span class = 'flight-info'>" + flights.legs[i].segments[0].airlineName + ":" + "</span>";
     // format departureDateAndTime
