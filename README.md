@@ -29,7 +29,7 @@ https://p1group5.github.io/trip-it/
 
 ## Screenshots
 ![Alt text](assets/images/screenshots/screenshot1.png)
-![Alt text](assets/images/screenshots/screenshot2.jng)
+![Alt text](assets/images/screenshots/screenshot2.png)
 ![Alt text](assets/images/screenshots/screenshot3.png)
 ![Alt text](assets/images/screenshots/screenshot3.png)
 ![Alt text](assets/images/screenshots/screenshot4.png)
