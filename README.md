@@ -2,7 +2,7 @@
 
 ## About Us:
 * We are a group of students who are currently future coders looking for all differnet types of opportunities to improve on skills & abilities!
-* ![Alt text](assets/images/Trip-It-Words-Beside (500 × 100 px) (300 × 100 px) (1).png)
+![Alt text](assets/images/screenshots/trip-it-logo.png)
 
 ### Purpose:
 
