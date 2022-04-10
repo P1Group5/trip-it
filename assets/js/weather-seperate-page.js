@@ -97,6 +97,7 @@ var getCurrentWeather = function (city) {
 
       getUv(cityLon, cityLat);
       searchCityEl.value = "";
+      
       fiveDayWeather(cityLon, cityLat);
     });
 };
@@ -171,6 +172,9 @@ var fiveDayWeather = function (lon, lat) {
         cardArray[i].append("Humidity: " + dayHumidity + "% ");
         cardArray[i].append("Wind Speed: " + dayWind + " m/s");
       }
+      var removeClass = document.getElementById("five-day-forecast")
+      removeClass.classList.remove("is-hidden")
+      removeClass;
     });
 };
 
