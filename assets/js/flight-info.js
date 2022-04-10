@@ -46,6 +46,7 @@ var getFlights = function() {
             response.json().then(function(data) {
                 // pass response to DOM function
                 displayFlights(data);
+                
             });
         }
         else {
@@ -71,19 +72,43 @@ if(flights.offers.length === 0) {
     flightContainerEL.appendChild(flightEl);
     return;
     }
-  
+
+// Creates an array of offers. This will by populated with the flightOffer objects
+var flightOffers = [];
   //loop over offers
   for (var i = 0; i < flights.offers.length; i++) {
-    // format airlineName
-    var airlineName = "<span class = 'flight-info'>" + flights.legs[i].segments[0].airlineName + ":" + "</span>";
-    // format departureDateAndTime
-    var departureDateAndTime = "<span class = 'flight-info'>" + "Leaving from " + (departureCity) + " on " + flights.legs[i].segments[0].departureTime + "</span>";
-    // format returnDateAndTime
-    //var returnDateAndTime = "<span class = 'flight-info'>" + "Returning from " + (destination) + " on " + flights.legs[i].segments[1].departureTime + "</span>";    
-    // format baseFare
-    var baseFare = "<span class = 'flight-info'>" + "Base fare in USD " + flights.offers[i].totalPrice.formattedPrice + "</span>";
-    // format seatsRemaining
-    var seatsRemaining = "<span class = 'flight-info'>" + "remaining seats: " + flights.offers[i].seatsRemaining + "</span>";
+    // Creates the flightOffer object. We will set properties for each object in the loop
+    var flightOffer = {};
+    flightOffer.totalFare = flights.offers[i].totalFare
+    // check legs IDs for each flights offer
+    for (var j = 0; j < flights.legs.length; j++){
+       if (flights.offers[i].legIds[0] === flights.legs[j].legId){
+           var lastSegment = flights.legs[j].segments.length - 1;
+           console.log("offers # " + i + " matches legs " + j + " for the departing flight");
+           flightOffer.departingConnections = flights.legs[j].segments.length - 1;
+           flightOffer.departingAirline = flights.legs[j].segments[0].airlineName;
+           flightOffer.departingDate = flights.legs[j].segments[0].departureTime;
+           flightOffer.departingArrivalDateTime = flights.legs[j].segments[lastSegment].arrivalTime;   
+       };
+       if (flights.offers[i].legIds[1] === flights.legs[j].legId) {
+           var lastSegment = flights.legs[j].segments.length - 1;
+           console.log("offers # " + i + " matches legs " + j + " for the returning flight");
+           flightOffer.returningConnections = flights.legs[j].segments.length - 1;
+           flightOffer.returningAirline = flights.legs[j].segments[0].airlineName;
+           flightOffer.returningDateTime = flights.legs[j].segments[0].departureTime;
+           flightOffer.returningArrivalDateTime = flights.legs[j].segments[lastSegment].arrivalTime;
+       };
+    };
+    flightOffers.push(flightOffer);
+
+    // departing info
+    var departingInfoLineOne = "<span class = 'flight-info'>" + "Departing from " + departureCity + " on " + flightOffer.departingDate + " via " + flightOffer.departingAirline + "</span>";
+    var departingInfoLineTwo = "<span class = 'flight-info'>" + "Arriving in " + destination + " on " + flightOffer.departingArrivalDateTime + " with " + flightOffer.departingConnections + " connecting flight(s)." + "</span>";
+    // returning info
+    var returningInfoLineOne = "<span class = 'flight-info'>" + "Departing from " + destination + " on " + flightOffer.returningDateTime + " via " + flightOffer.returningAirline + "</span>";
+    var returningInfoLineTwo = "<span class = 'flight-info'>" + "Arriving in " + departureCity + " on " + flightOffer.returningArrivalDateTime + " with " + flightOffer.returningConnections + " connecting flight(s)." + "</span>";
+    // price in USD
+    var ticketPrice = "<span class = 'flight-info'>" + "Fare in USD " + flights.offers[i].totalPrice.formattedPrice + "</span>";
 
     // create a container for each flight
     var flightEl = document.createElement("a");
@@ -92,7 +117,7 @@ if(flights.offers.length === 0) {
 
     // create a span element to hold flight info
     var titleEl = document.createElement("span");
-    titleEl.innerHTML = airlineName + departureDateAndTime + baseFare + seatsRemaining;
+    titleEl.innerHTML = departingInfoLineOne + departingInfoLineTwo + returningInfoLineOne + returningInfoLineTwo + ticketPrice;
 
     // append container
     flightEl.appendChild(titleEl);
@@ -100,6 +125,8 @@ if(flights.offers.length === 0) {
     // append container to the dom
     flightContainerEL.appendChild(flightEl);
   }
+  console.log(flightOffers);
 };
+
 
 getFlights();
