@@ -35,7 +35,7 @@ https://p1group5.github.io/trip-it/
 ![Alt text](assets/images/screenshots/screenshot4.png)
 
 ## Contributors:
-Leandro Michelena (https://github.com/leandromichelena)
-Eric Smith (https://github.com/frodrickfronkenstein)
-Margaret Banks (https://github.com/maggiejoe)
-Nathaniel Chan (https://github.com/nchan22)
+* Leandro Michelena (https://github.com/leandromichelena)
+* Eric Smith (https://github.com/frodrickfronkenstein)
+* Margaret Banks (https://github.com/maggiejoe)
+* Nathaniel Chan (https://github.com/nchan22)
