@@ -26,28 +26,26 @@
     <!-- HEADER -->
     <!-- NAV BAR -->
     <!-- ?? need assistance with keeping the nav bar links to the right when browser size is adjusted ?? -->
-    <nav class="navbar is-transparent is-flex is-flex-wrap-wrap">
+    <nav class="navbar is-transparent">
         <div class="navbar-brand">
-          <a href="./index.html">
-            <img
-              class="logo"
-              src="./assets/images/Trip-It-Words-Beside (500 × 100 px) (300 × 100 px) (1).png"
-          /></a>
+            <a class="navbar-item" href="./index.html">
+                <img class="logo" src="./assets/images/Trip-It-Words-Beside (500 × 100 px) (300 × 100 px) (1).png"
+                    alt="Trip-It Logo" style="max-height: 100px" />
+            </a>
+            <a class="navbar-burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
         </div>
-        <div
-          class="navbar-end is-flex is-flex-wrap-wrap is-align-content-flex-end"
-        >
-          <a href="./travel-tips.html" class="navbar-item has-text-weight-bold"
-            >Travel Tips</a
-          >
-                    <a href="./weather.html" class="navbar-item has-text-weight-bold"
-            >Weather</a
-          >
-          <a onclick="history.back()" class="navbar-item has-text-weight-bold"
-            >Go Back</a
-          >
+        <div id="nav-links" class="navbar-menu">
+            <div class="navbar-end">
+                <a href="./travel-tips.html" class="navbar-item has-text-weight-bold">Travel Tips</a>
+                <a href="./weather.html" class="navbar-item has-text-weight-bold">Weather</a>
+                <a onclick="history.back()" class="navbar-item has-text-weight-bold">Go Back</a>
+            </div>
         </div>
-      </nav>
+    </nav>
 
     <!-- RESULTS SECTION -->
     <section class="results-page container">
@@ -72,10 +70,10 @@
 
     <!-- USER RESULTS -->
     <section class="container">
-        <article class="columns">
+        <article class="columns results-data">
                 <!-- FLIGHTS -->
                 <div class="output-data column is-6">
-                    <h4 class="is-size-5 has-text-weight-bold mx-2 my-2">Flight Options</h4>
+                    <h4 class="is-size-5 has-text-weight-bold mx-2 my-2 has-text-centered-mobile">Flight Options</h4>
                     <section class="container mx-2 my-2">
                         <article id="flights-container" class="columns is-flex is-flex-direction-column is-full">
                             <!-- UP TO 10 DIFFERENT FLIGHT OPTIONS -->
@@ -178,5 +176,7 @@
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/things-to-do.js"></script>
     <script src="./assets/js/weather-seperate-page.js"></script>
+    <!-- loads datepicker and mobile navbar -->
+    <script src="./assets/js/date-picker.js"></script>
 </body>
 </html>
