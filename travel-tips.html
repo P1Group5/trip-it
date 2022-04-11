@@ -1,128 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trip It! - Travel Tips</title>
 
-    <!-- ICONS -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trip It! - Travel Tips</title>
 
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- ICONS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-    <!-- STYLE SHEETS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
-    />
-    <link rel="stylesheet" href="./assets/css/travel-tips.css" />
-  </head>
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap" rel="stylesheet" />
 
-  <body>
-    <!-- HEADER -->
-    <!-- NAV BAR -->
-    <!-- ?? need assistance with keeping the nav bar links to the right when browser size is adjusted ?? -->
-    <nav class="navbar is-transparent is-flex is-flex-wrap-wrap">
-      <div class="navbar-brand">
-        <a href="./index.html">
-          <img
-            class="logo"
-            src="./assets/images/Trip-It-Words-Beside (500 × 100 px) (300 × 100 px) (1).png"
-        /></a>
+  <!-- STYLE SHEETS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+  <link rel="stylesheet" href="./assets/css/travel-tips.css" />
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <!-- NAV BAR -->
+  <!-- ?? need assistance with keeping the nav bar links to the right when browser size is adjusted ?? -->
+  <nav class="navbar is-transparent">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="./index.html">
+        <img class="logo" src="./assets/images/Trip-It-Words-Beside (500 × 100 px) (300 × 100 px) (1).png"
+          alt="Trip-It Logo" style="max-height: 100px" />
+      </a>
+      <!-- works on all pages except weather.html and travel-tips.html -->
+      <a class="navbar-burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+    <div id="nav-links" class="navbar-menu">
+      <div class="navbar-end">
+        <a href="./travel-tips.html" class="navbar-item has-text-weight-bold">Travel Tips</a>
+        <a href="./weather.html" class="navbar-item has-text-weight-bold">Weather</a>
+        <a onclick="history.back()" class="navbar-item has-text-weight-bold">Go Back</a>
       </div>
-      <div
-        class="navbar-end is-flex is-flex-wrap-wrap is-align-content-flex-end"
-      >
-        <a href="./travel-tips.html" class="navbar-item has-text-weight-bold"
-          >Travel Tips</a
-        >
-        <a href="./weather.html" class="navbar-item has-text-weight-bold"
-          >Weather</a
-        >
-        <a onclick="history.back()" class="navbar-item has-text-weight-bold"
-          >Go Back</a
-        >
-      </div>
-    </nav>
+    </div>
+  </nav>
 
+  <!-- INTRO -->
+  <section class="container">
     <!-- INTRO -->
-    <section class="container">
-      <!-- INTRO -->
-      <article class="columns">
-        <div class="column">
-          <h2 class="column is-size-1 has-text-centered has-text-weight-bold">
-            Everything You Need
-          </h2>
-          <h3 class="column has-text-centered is-size-5">
-            To Feel Confident On Your Next Trip
-          </h3>
-        </div>
-      </article>
-    </section>
-
-    <!-- TRAVEL TIPS LIST -->
-    <section class="container mx-6 my-6">
-      <article class="columns is-flex is-flex-direction-column level">
-        <div class="travel-list column is-12 mx-6 my-3">
-          <h3 class="is-size-3 has-text-weight-bold">
-            The Ultimate Packing Guide
-          </h3>
-          <span class="material-icons"> luggage </span>
-        </div>
-        <div class="travel-list column is-12 mx-6 my-3">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-            quisquam laudantium dicta beatae numquam voluptatum?
-          </p>
-        </div>
-        <div class="travel-list column is-12 mx-6 my-3">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-            quisquam laudantium dicta beatae numquam voluptatum?
-          </p>
-        </div>
-        <div class="travel-list column is-12 mx-6 my-3">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-            quisquam laudantium dicta beatae numquam voluptatum?
-          </p>
-        </div>
-      </article>
-    </section>
-
-    <!-- TRAVEL TIPS LIST -->
-    <section class="container">
-      <article class="columns">
-        <div class="travel-list column is-12"></div>
-        <div class="travel-list column is-12"></div>
-        <div class="travel-list column is-12"></div>
-        <div class="travel-list column is-12"></div>
-      </article>
-    </section>
-
-    <!-- FOOTER -->
-    <!-- ?? Still working on getting the footer to be sticky to the bottom of the page (not built into Bulma for some reason) -->
-    <footer class="footer">
-      <div class="content has-text-centered">
-        <a href="#about-us-modal" class="about-us has-text-weight-bold px-4"
-          >About Us</a
-        >
-        &copy; 2022 Trip It
+    <article class="columns">
+      <div class="column">
+        <h2 class="column is-size-1 has-text-centered has-text-weight-bold">
+          Everything You Need
+        </h2>
+        <h3 class="column has-text-centered is-size-5">
+          To Feel Confident On Your Next Trip
+        </h3>
       </div>
-    </footer>
-    <!-- SCRIPT FILES -->
-    <script src="./assets/js/flight-info.js"></script>
-    <script src="./assets/js/airports-array.js"></script>
-    <script src="./assets/js/autocomplete.js"></script>
-  </body>
+    </article>
+  </section>
+
+  <!-- TRAVEL TIPS LIST -->
+  <section class="container mx-6 my-6">
+    <article class="columns is-flex is-flex-direction-column level">
+      <div class="travel-list column is-12 mx-6 my-3">
+        <h3 class="is-size-3 has-text-weight-bold">
+          The Ultimate Packing Guide
+        </h3>
+        <span class="material-icons"> luggage </span>
+      </div>
+      <div class="travel-list column is-12 mx-6 my-3">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+          quisquam laudantium dicta beatae numquam voluptatum?
+        </p>
+      </div>
+      <div class="travel-list column is-12 mx-6 my-3">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+          quisquam laudantium dicta beatae numquam voluptatum?
+        </p>
+      </div>
+      <div class="travel-list column is-12 mx-6 my-3">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+          quisquam laudantium dicta beatae numquam voluptatum?
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <!-- TRAVEL TIPS LIST -->
+  <section class="container">
+    <article class="columns">
+      <div class="travel-list column is-12"></div>
+      <div class="travel-list column is-12"></div>
+      <div class="travel-list column is-12"></div>
+      <div class="travel-list column is-12"></div>
+    </article>
+  </section>
+
+  <!-- FOOTER -->
+  <!-- ?? Still working on getting the footer to be sticky to the bottom of the page (not built into Bulma for some reason) -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <a href="#about-us-modal" class="about-us has-text-weight-bold px-4">About Us</a>
+      &copy; 2022 Trip It
+    </div>
+  </footer>
+  <!-- SCRIPT FILES -->
+  <script src="./assets/js/flight-info.js"></script>
+  <script src="./assets/js/airports-array.js"></script>
+  <script src="./assets/js/autocomplete.js"></script>
+  <!-- loads datepicker and mobile navbar -->
+  <script src="./assets/js/date-picker.js"></script>
+</body>
+
 </html>
