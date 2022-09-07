@@ -6,10 +6,10 @@
 1. [Description](#description)
 2. [Motivation](#motivation)
 3. [Challenges](#challenges)
-4. [Technologies Applied](#technologies)
-5. [Future Development](#future)
-6. [Documentation](#documentation)
-7. [Contributors] (#contributors)
+4. [Screenshots](#screenshots)
+5. [Technologies Applied](#technologies-applied)
+6. [Future Development](#future-development)
+7. [Contributors](#contributors)
 8. [Links](#links)
 
 
@@ -41,7 +41,7 @@ First off, our biggest challenge was finding and API that we could integrate wit
 * moment.js
 
 
-## Future Uses:
+## Future Development
 * Update to allow user to send suggestion in for different functions and uses
 * Implement the weather page onto the results page
 * Implement further future forecast
