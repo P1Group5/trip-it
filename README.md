@@ -7,7 +7,7 @@
 2. [Motivation](#motivation)
 3. [Challenges](#challenges)
 4. [Screenshots](#screenshots)
-5. [Technologies Applied](#technologies-applied)
+5. [Technologies Used](#technologies-used)
 6. [Future Development](#future-development)
 7. [Contributors](#contributors)
 8. [Links](#links)
@@ -33,7 +33,7 @@ First off, our biggest challenge was finding and API that we could integrate wit
 ![Alt text](assets/images/screenshots/screenshot4.png)
 
 
-### Technologies Appied
+## Technologies Used
 * HTML
 * Bulma (CSS alternative)
 * JavaScript
